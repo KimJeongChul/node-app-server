@@ -21,7 +21,7 @@ var handler = function(request, response) {
             response.write("Your IP is " + ifname + " : "  +iface.address + "\n");
         });
     });
-    response.write("Your OS is " + os.platform() + "\n");
+    response.end("Your OS is " + os.platform() + "\n");
 };
 
 var www = http.createServer(handler);
